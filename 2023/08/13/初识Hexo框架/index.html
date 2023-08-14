@@ -80,7 +80,7 @@ Hexo是一个轻量级的静态网站生成器，它可以帮助您快速搭建�
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
-      <span>主页</span>
+      <span>首页</span>
     </a>
     
   </li>
@@ -186,7 +186,7 @@ Hexo是一个轻量级的静态网站生成器，它可以帮助您快速搭建�
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
-			主页
+			首页
 		</a>
           
         </li>
@@ -808,7 +808,7 @@ Hexo是一个轻量级的静态网站生成器，它可以帮助您快速搭建�
         <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
                    server="netease"
                    type="playlist"
-                   id="503838841"
+                   id="5107070683"
                    fixed='true'
                    autoplay='false'
                    theme='#42b983'
@@ -864,7 +864,7 @@ Hexo是一个轻量级的静态网站生成器，它可以帮助您快速搭建�
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/xiaochen-j/Shuchen.gi" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/xiaochen-j/Shuchen.git" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
@@ -1054,6 +1054,14 @@ $(function () {
     
 
     <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/Shuchen/libs/others/star.js"><\/script>');
+            }
+        </script>
     
 
      
