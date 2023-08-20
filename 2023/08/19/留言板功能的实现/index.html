@@ -4,8 +4,16 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="contact, 小晨的博客">
-    <meta name="description" content="小晨的博客">
+    <meta name="keywords" content="留言板功能的实现, 小晨的博客">
+    <meta name="description" content="环境准备由于本站博客系统使用的是LeanCloud提供的，因此先打开官网进行注册。
+注册完成后直接选择创建应用，应用名称随便填，方案选择开发版，点击创建即可。
+创建一个新的应用
+
+随便取个名字，自己看着取吧
+
+应用创建完成，点开配置按钮
+
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +25,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>contact | 小晨的博客</title>
+    <title>留言板功能的实现 | 小晨的博客</title>
     <link rel="icon" type="image/png" href="/Shuchen/favicon.png">
     
 
@@ -459,287 +467,253 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                    Kapok
-                
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="/Shuchen/libs/typed/typed.js"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "巅峰迎来虚伪的拥护，黄昏见证真正的信徒！",
-                            
-                                "Welcome to my blog, Good luck with your good mood!",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/Shuchen/medias/featureimages/16.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">留言板功能的实现</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/Shuchen/medias/banner/" + new Date().getMinutes() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
-<script>
+
+
+<main class="post-container content">
+
     
-      var bannerUrl = "/Shuchen/medias/featureimages/" + Math.floor(Math.random() * 24) + '.jpg';
-    
-    $('.bg-cover.about-cover').css('background-image', 'url(' + bannerUrl + ')');
-
-</script>
-
-
-    </div>
-</div>
-    <style>
-        .friends-container {
-            margin-top: -100px;
-            margin-bottom: 30px;
-        }
-
-        .friends-container .tag-title {
-            margin-bottom: 10px;
-            color: #3C4858;
-            font-size: 1.75rem;
-            font-weight: 400;
-        }
-
-        .frind-ship img {
-            border-radius: 50%;
-        }
-
-        /* 一下是按钮样式 */
-
-        .frind-ship {
-            padding: 10px 20px;
-        }
-
-        .frind-ship .title {
-            display: flex;
-            align-items: center;
-        }
-
-        .frind-ship .title div {
-            color: #fff;
-            padding-left: 10px;
-        }
-
-        .frind-ship .title img {
-            width: 100px;
-            height: 100px;
-            flex-shrink: 0;
-        }
-
-        .frind-ship .title h1 {
-            padding-bottom: 5px;
-            border-bottom: 2px solid #fff;
-            position: relative;
-            top: -15px;
-            left: 3px;
-        }
-
-        .friend-button {
-            display: flex;
-            justify-content: center;
-            margin-bottom: -27px;
-        }
-
-        .friend-button a {
-            border-radius: 40px;
-        }
-
-        .friend-all .tag-post {
-            margin-bottom: 30px;
-        }
-
-        .button-caution {
-            background-color: #FF4351;
-            border-color: #FF4351;
-            color: #FFF;
-        }
-
-        .button {
-            font-weight: 300;
-            font-size: 16px;
-            font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-            text-decoration: none;
-            text-align: center;
-            line-height: 40px;
-            height: 40px;
-            padding: 0 40px;
-            margin: 0;
-            display: inline-block;
-            appearance: none;
-            cursor: pointer;
-            border: none;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            -webkit-transition-property: all;
-            transition-property: all;
-            -webkit-transition-duration: .3s;
-            transition-duration: .3s;
-        }
-
-        .title {
-            margin-bottom: 0rem !important;
-        }
-
-        .card {
-            margin: 3rem 0 1rem 0 !important;
-        }
-
-        .button-glow.button-caution {
-            -webkit-animation-name: glowing-caution;
-            animation-name: glowing-caution;
-        }
-
-        @-webkit-keyframes glowing-caution {
-            from {
-                -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-                box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-            }
-
-            50% {
-                -webkit-box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
-                box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
-            }
-
-            to {
-                -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-                box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-            }
-        }
-
-        @keyframes glowing-caution {
-            from {
-                -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-                box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-            }
-
-            50% {
-                -webkit-box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
-                box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
-            }
-
-            to {
-                -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-                box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-            }
-        }
-
-        .button-caution:hover {
-            background-color: #ff7680;
-            border-color: #ff7680;
-            color: #FFF;
-            text-decoration: none;
-        }
-
-        .frind-card1 {
-            background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-        }
-
-        .frind-card2 {
-            background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-
-        .frind-card3 {
-            background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
-        }
-
-        .frind-card4 {
-            background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
-        }
-
-        .frind-card5 {
-            background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
-        }
-
-        .frind-card6 {
-            background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
-        }
-
-        .frind-card7 {
-            background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
-        }
-
-        .frind-card8 {
-            background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
-        }
-
-        .frind-card9 {
-            background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
-        }
-
-        .frind-card10 {
-            background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
-        }
-
-        article .card {
-            overflow: visible !important;
-        }
-    </style>
-
-    <main class="content">
-        <div class="container friends-container">
-            <div class="card">
-                <div class="card-content">
-                    <div class="tag-title center-align">
-                        <i class="fas fa-comments"></i>&nbsp;&nbsp;Contact
-                    </div>
-                    <div style="text-align: center; margin-top: 40px;">
-                        <p>
-                            <b>一起谈谈吧</b><br>
-                            <b>在这里可以留下你的足迹，欢迎在下方留言，欢迎交换友链</b><br>
-                            <b>友链信息</b><br>
-                            <b>博客名称: 小晨的博客</b><br>
-                            <b>博客网址: https://github.com/xiaochen-j/Shuchen.git</b><br>
-                            <b>博客头像: https://github.com/xiaochen-j/Shuchen.git/medias/logo.png</b><br>
-                            <b>博客介绍: 巅峰迎来虚伪的拥护,黄昏见证真正的信徒</b><br>
-                        </p>
-                    </div>
-                    <article id="friends-link">
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
                         
-                    </article>
+                            <a href="/Shuchen/tags/Valine%E7%95%99%E8%A8%80%E7%B3%BB%E7%BB%9F/">
+                                <span class="chip bg-color">Valine留言系统</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
                 </div>
             </div>
 
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2023-08-19
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
+                    2023-08-20
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
+                    984
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
+                    4 Min
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>由于本站博客系统使用的是<a target="_blank" rel="noopener" href="https://console.leancloud.cn/">LeanCloud</a>提供的，因此先打开官网进行<a target="_blank" rel="noopener" href="https://leancloud.cn/dashboard/login.html#/signup">注册</a>。</p>
+<p>注册完成后直接选择创建应用，应用名称随便填，方案选择开发版，点击创建即可。</p>
+<p>创建一个新的应用</p>
+<p><img src="https://pic4.zhimg.com/80/v2-6a86faa0e0c0f4f51733e7c4b74ab7ab_720w.webp" alt="img"></p>
+<p>随便取个名字，自己看着取吧</p>
+<p><img src="https://pic1.zhimg.com/80/v2-e5699239134a7648b678c46a3708adf0_720w.webp" alt="img"></p>
+<p>应用创建完成，点开配置按钮</p>
+<p><img src="https://pic1.zhimg.com/80/v2-39758c1e51f3d61af0a317b32cae22cc_720w.webp" alt="img"></p>
+<p>点击<code>设置</code> &gt; <code>应用Key</code> 复制App ID 和 App Key</p>
+<p><img src="https://pic2.zhimg.com/80/v2-6a92076a18aedf62c8f5eaf31847dea9_720w.webp" alt="img"></p>
+<p>点击<code>设置</code> &gt; <code>安全中心</code> 把自己博客网址添加到安全中心，保证数据的调用安全。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-db408f90ca015f0803e0a1296890984d_720w.webp" alt="img"></p>
+<h2 id="配置评论系统"><a href="#配置评论系统" class="headerlink" title="配置评论系统"></a>配置评论系统</h2><p>在matery主题的配置文件<code>_config.yml</code>中，创建Valine属性：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.</span></span><br><span class="line"><span class="attr">valine:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span> </span><br><span class="line">  <span class="attr">appId:</span> <span class="string">你的AppID</span></span><br><span class="line">  <span class="attr">appKey:</span> <span class="string">你的AppKey</span></span><br><span class="line">  <span class="attr">pageSize:</span> <span class="number">10</span>                <span class="comment"># 每页显示条数</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">monsterid</span>           <span class="comment"># 默认头像</span></span><br><span class="line">  <span class="attr">lang:</span> <span class="string">zh-CN</span> </span><br><span class="line">  <span class="attr">placeholder:</span> <span class="string">昵称填写qq可以显示qq头像和昵称哦~</span>   <span class="comment"># 提示信息</span></span><br><span class="line">  <span class="attr">guest_info:</span> <span class="string">nick,mail,link</span> </span><br><span class="line">  <span class="attr">recordIP:</span> <span class="literal">true</span> </span><br><span class="line">  <span class="attr">serverURLs:</span> <span class="string">&#x27;&#x27;</span> </span><br><span class="line">  <span class="attr">background:</span> <span class="string">/medias/comment_bg.png</span>               <span class="comment"># 背景图片</span></span><br><span class="line">  <span class="attr">count:</span> <span class="literal">true</span> </span><br><span class="line"><span class="number">1234567891011121314</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="管理评论"><a href="#管理评论" class="headerlink" title="管理评论"></a>管理评论</h2><p>进入<a target="_blank" rel="noopener" href="https://console.leancloud.cn/apps">LeanCloud</a>，点击<code>数据存储</code>，选择<code>Comment</code>，然后你就可以操作数据了</p>
+<h2 id="增强Valine系统"><a href="#增强Valine系统" class="headerlink" title="增强Valine系统"></a>增强Valine系统</h2><h3 id="更换Valine的版本"><a href="#更换Valine的版本" class="headerlink" title="更换Valine的版本"></a>更换Valine的版本</h3><p>在matery配置页面，找到libs.js.valine，将其设置为<code>valine: https://unpkg.com/valine/dist/Valine.min.js</code></p>
+<p>打开<code>themes\matery\layout\_partial</code>中找到<code>valine.ejs</code>，找到其中的<code>new Valine</code>，大概在249行，修改为以下内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">new Valine(&#123;</span><br><span class="line">        el: &#x27;#vcomments&#x27;,</span><br><span class="line">        appId: &#x27;&lt;%- theme.valine.appId %&gt;&#x27;,</span><br><span class="line">        appKey: &#x27;&lt;%- theme.valine.appKey %&gt;&#x27;,</span><br><span class="line">        notify: &#x27;&lt;%- theme.valine.notify %&gt;&#x27; === &#x27;true&#x27;,</span><br><span class="line">        verify: &#x27;&lt;%- theme.valine.verify %&gt;&#x27; === &#x27;true&#x27;,</span><br><span class="line">        visitor: &#x27;&lt;%- theme.valine.visitor %&gt;&#x27; === &#x27;true&#x27;,</span><br><span class="line">        avatar: &#x27;&lt;%- theme.valine.avatar %&gt;&#x27;,</span><br><span class="line">        pageSize: &#x27;&lt;%- theme.valine.pageSize %&gt;&#x27;,</span><br><span class="line">        lang: &#x27;&lt;% if (config.language == &quot;zh-CN&quot;) &#123;  %&gt;zh-cn&lt;% &#125; else &#123; %&gt;en&lt;% &#125; %&gt;&#x27;,</span><br><span class="line">        placeholder: &#x27;&lt;%= theme.valine.placeholder %&gt;&#x27;,</span><br><span class="line">        enableQQ: true,</span><br><span class="line">        emojiCDN: &#x27;//i0.hdslb.com/bfs/emote/&#x27;, </span><br><span class="line">        // 表情title和图片映射</span><br><span class="line">        emojiMaps: &#123;</span><br><span class="line">        &quot;tv_doge&quot;: &quot;6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png&quot;,</span><br><span class="line">        &quot;tv_亲亲&quot;: &quot;a8111ad55953ef5e3be3327ef94eb4a39d535d06.png&quot;,</span><br><span class="line">        &quot;tv_偷笑&quot;: &quot;bb690d4107620f1c15cff29509db529a73aee261.png&quot;,</span><br><span class="line">        &quot;tv_再见&quot;: &quot;180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png&quot;,</span><br><span class="line">        &quot;tv_冷漠&quot;: &quot;b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png&quot;,</span><br><span class="line">        &quot;tv_发怒&quot;: &quot;34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png&quot;,</span><br><span class="line">        &quot;tv_发财&quot;: &quot;34db290afd2963723c6eb3c4560667db7253a21a.png&quot;,</span><br><span class="line">        &quot;tv_可爱&quot;: &quot;9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png&quot;,</span><br><span class="line">        &quot;tv_吐血&quot;: &quot;09dd16a7aa59b77baa1155d47484409624470c77.png&quot;,</span><br><span class="line">        &quot;tv_呆&quot;: &quot;fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png&quot;,</span><br><span class="line">        &quot;tv_呕吐&quot;: &quot;9f996894a39e282ccf5e66856af49483f81870f3.png&quot;,</span><br><span class="line">        &quot;tv_困&quot;: &quot;241ee304e44c0af029adceb294399391e4737ef2.png&quot;,</span><br><span class="line">        &quot;tv_坏笑&quot;: &quot;1f0b87f731a671079842116e0991c91c2c88645a.png&quot;,</span><br><span class="line">        &quot;tv_大佬&quot;: &quot;093c1e2c490161aca397afc45573c877cdead616.png&quot;,</span><br><span class="line">        &quot;tv_大哭&quot;: &quot;23269aeb35f99daee28dda129676f6e9ea87934f.png&quot;,</span><br><span class="line">        &quot;tv_委屈&quot;: &quot;d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png&quot;,</span><br><span class="line">        &quot;tv_害羞&quot;: &quot;a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png&quot;,</span><br><span class="line">        &quot;tv_尴尬&quot;: &quot;7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png&quot;,</span><br><span class="line">        &quot;tv_微笑&quot;: &quot;70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png&quot;,</span><br><span class="line">        &quot;tv_思考&quot;: &quot;90cf159733e558137ed20aa04d09964436f618a1.png&quot;,</span><br><span class="line">        &quot;tv_惊吓&quot;: &quot;0d15c7e2ee58e935adc6a7193ee042388adc22af.png&quot;,</span><br><span class="line">        &quot;tv_打脸&quot;: &quot;56ab10b624063e966bfcb76ea5dc4794d87dfd47.png&quot;,</span><br><span class="line">        &quot;tv_抓狂&quot;: &quot;fe31c08edad661d63762b04e17b8d5ae3c71a757.png&quot;,</span><br><span class="line">        &quot;tv_抠鼻&quot;: &quot;c666f55e88d471e51bbd9fab9bb308110824a6eb.png&quot;,</span><br><span class="line">        &quot;tv_斜眼笑&quot;: &quot;911f987aa8bc1bee12d52aafe62bc41ef4474e6c.png&quot;,</span><br><span class="line">        &quot;tv_无奈&quot;: &quot;ea8ed89ee9878f2fece2dda0ea8a5dbfe21b5751.png&quot;,</span><br><span class="line">        &quot;tv_晕&quot;: &quot;5443c22b4d07fb1907ccc610c8e6db254f2461b7.png&quot;,</span><br><span class="line">        &quot;tv_流汗&quot;: &quot;cead1c351ab8d79e9f369605beb90148db0fbed3.png&quot;,</span><br><span class="line">        &quot;tv_流泪&quot;: &quot;7e71cde7858f0cd50d74b0264aa26db612a8a167.png&quot;,</span><br><span class="line">        &quot;tv_流鼻血&quot;: &quot;c32d39db2737f89b904ca32700d140a9241b0767.png&quot;,</span><br><span class="line">        &quot;tv_点赞&quot;: &quot;f85c354995bd99e28fc76c869bfe42ba6438eff4.png&quot;,</span><br><span class="line">        &quot;tv_生气&quot;: &quot;26702dcafdab5e8225b43ffd23c94ac1ff932654.png&quot;,</span><br><span class="line">        &quot;tv_生病&quot;: &quot;8b0ec90e6b86771092a498c54f09fc94621c1900.png&quot;,</span><br><span class="line">        &quot;tv_疑问&quot;: &quot;0793d949b18d7be716078349c202c15ff166f314.png&quot;,</span><br><span class="line">        &quot;tv_白眼&quot;: &quot;c1d59f439e379ee50eef488bcb5e5378e5044ea4.png&quot;,</span><br><span class="line">        &quot;tv_皱眉&quot;: &quot;72ccad6679fea0d14cce648b4d818e09b8ffea2d.png&quot;,</span><br><span class="line">        &quot;tv_目瞪口呆&quot;: &quot;0b8cb81a68de5d5365212c99375e7ace3e7891b7.png&quot;,</span><br><span class="line">        &quot;tv_睡着&quot;: &quot;8b196675b53af58264f383c50ad0945048290b33.png&quot;,</span><br><span class="line">        &quot;tv_笑哭&quot;: &quot;1abc628f6d4f4caf9d0e7800878f4697abbc8273.png&quot;,</span><br><span class="line">        &quot;tv_腼腆&quot;: &quot;89712c0d4af73e67f89e35cbc518420380a7f6f4.png&quot;,</span><br><span class="line">        &quot;tv_色&quot;: &quot;61822c7e9aae5da76475e7892534545336b23a6f.png&quot;,</span><br><span class="line">        &quot;tv_调侃&quot;: &quot;4bc022533ef31544ca0d72c12c808cf4a1cce3e3.png&quot;,</span><br><span class="line">        &quot;tv_调皮&quot;: &quot;b9c41de8e82dd7a8515ae5e3cb63e898bf245186.png&quot;,</span><br><span class="line">        &quot;tv_鄙视&quot;: &quot;6e72339f346a692a495b123174b49e4e8e781303.png&quot;,</span><br><span class="line">        &quot;tv_闭嘴&quot;: &quot;c9e990da7f6e93975e25fd8b70e2e290aa4086ef.png&quot;,</span><br><span class="line">        &quot;tv_难过&quot;: &quot;87f46748d3f142ebc6586ff58860d0e2fc8263ba.png&quot;,</span><br><span class="line">        &quot;tv_馋&quot;: &quot;fc7e829b845c43c623c8b490ee3602b7f0e76a31.png&quot;,</span><br><span class="line">        &quot;tv_鬼脸&quot;: &quot;0ffbbddf8a94d124ca2f54b360bbc04feb6bbfea.png&quot;,</span><br><span class="line">        &quot;tv_黑人问号&quot;: &quot;45821a01f51bc867da9edbaa2e070410819a95b2.png&quot;,</span><br><span class="line">        &quot;tv_鼓掌&quot;: &quot;1d21793f96ef4e6f48b23e53e3b9e42da833a0f6.png&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        requiredFields: [&#x27;nick&#x27;,&#x27;mail&#x27;], //设置必填项</span><br><span class="line">    &#125;);</span><br><span class="line">1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768</span><br></pre></td></tr></table></figure>
+
+<p>重新部署查看</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp; hexo g -d</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>更加详细操作请参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/slow_sparrow/article/details/117753100">为使用matery主题的hexo增加Valine评论系统_howyoung525的博客-CSDN博客</a></p>
+
+                
+            </div>
+            <hr/>
+
             
 
-                    <div class="card">
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/Shuchen/about" rel="external nofollow noreferrer">XiaoChen</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://github.com/xiaochen-j/Shuchen.git/Shuchen/2023/08/19/%E7%95%99%E8%A8%80%E6%9D%BF%E5%8A%9F%E8%83%BD%E7%9A%84%E5%AE%9E%E7%8E%B0/">https://github.com/xiaochen-j/Shuchen.git/Shuchen/2023/08/19/%E7%95%99%E8%A8%80%E6%9D%BF%E5%8A%9F%E8%83%BD%E7%9A%84%E5%AE%9E%E7%8E%B0/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint policy. If reproduced, please indicate source
+                    <a href="/Shuchen/about" target="_blank">XiaoChen</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
 
-                        
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
 
-                                    
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
 
-                                                
 
-                                                            
 
-                                                                        
-                                                                            <style>
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/Shuchen/tags/Valine%E7%95%99%E8%A8%80%E7%B3%BB%E7%BB%9F/">
+                                    <span class="chip bg-color">Valine留言系统</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/Shuchen/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/Shuchen/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/Shuchen/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/Shuchen/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
     .valine-card {
         margin: 1.5rem auto;
     }
@@ -1061,23 +1035,224 @@
 <!--酷Q推送-->
 
 
-                                                                                
+    
 
-                                                                                    
+    
 
-                                                                                                
+    
 
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
+            <div class="card">
+                <a href="/Shuchen/2023/08/19/%E7%95%99%E8%A8%80%E6%9D%BF%E5%8A%9F%E8%83%BD%E7%9A%84%E5%AE%9E%E7%8E%B0/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/Shuchen/medias/featureimages/16.jpg" class="responsive-img" alt="留言板功能的实现">
+                        
+                        <span class="card-title">留言板功能的实现</span>
                     </div>
-        </div>
-    </main>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            XiaoChen
+                            
+                        </span>
+                    </div>
+                </div>
 
-    <script>
-        $(function () {
-            $('#friends-link').masonry({
-                itemSelector: '.friend-div'
-            });
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/Shuchen/tags/Valine%E7%95%99%E8%A8%80%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">Valine留言系统</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/Shuchen/2023/08/17/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/Shuchen/medias/featureimages/6.jpg" class="responsive-img" alt="前端开发入门指南">
+                        
+                        <span class="card-title">前端开发入门指南</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-17
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            XiaoChen
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/Shuchen/tags/%E5%AD%A6%E4%B9%A0%E5%92%8C%E5%BB%BA%E8%AE%AE/">
+                        <span class="chip bg-color">学习和建议</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/Shuchen/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/Shuchen/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/Shuchen/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/Shuchen/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/Shuchen/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
         });
-    </script>
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
 
     <footer class="page-footer bg-color">
     
