@@ -700,6 +700,36 @@
         article .card {
             overflow: visible !important;
         }
+
+        .bigbox {
+            display: flex;
+            /* border: 5px solid grey; */
+            flex-direction: column;
+
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex1 {
+            flex: 1;
+        }
+
+        .zudiv {
+            margin: 5px 5px 5px 5px;
+        }
+
+        .avatar {
+            display: inline-block;
+            overflow: hidden;
+            border-radius: 90%;
+            transition: transform 0.3s;
+        }
+
+        .avatar:hover {
+            transform: scale(1.2);
+        }
     </style>
 
     <main class="content">
@@ -709,11 +739,65 @@
                     <div class="tag-title center-align">
                         <i class="fas fa-address-book"></i>&nbsp;&nbsp;Friends
                     </div>
+
+
                     <!-- <article id="friends-link">
                     
                 </article> -->
                 </div>
             </div>
+            <div class="bigbox">
+                <!-- 这是第一组 -->
+                <div class="flex zudiv ">
+                    <div class="flex flex1 zudiv" style=" height: 300px; border: 1px solid;flex-direction: column; ">
+                        <div class="zudiv avatar " style="text-align: center;">
+                            <img src="http://q1.qlogo.cn/g?b=qq&nk=1317308945&s=100" alt="">
+                        </div>
+                        <div class="zudiv flex">
+                            <span>博客名称：hauchet的博客</span>
+                        </div>
+                        <div class="zudiv flex">
+                            <span>博客链接:<a target="_blank" rel="noopener" href="https://www.hauchet.cn/">https://www.hauchet.cn/</a></span>
+                        </div>
+                        <div class="zudiv flex">
+                            <span>个人描述：一个牛逼的小孩，但小晨是我的大哥。泰酷辣</span>
+                        </div>
+
+
+                    </div>
+                    <div class="flex flex1 zudiv" style=" height: 300px;border: 1px solid"></div>
+                    <div class="flex flex1 zudiv" style=" height: 300px; border:1px  solid"></div>
+                    <div class="flex flex1 zudiv" style=" height: 300px; border: 1px solid"></div>
+
+                </div>
+                <!-- 这是第二组 -->
+                <div class="flex zudiv ">
+                    <div class="flex flex1 zudiv" style=" height: 300px; border: 1px solid"></div>
+                    <div class="flex flex1 zudiv" style=" height: 300px;border: 1px solid"></div>
+                    <div class="flex flex1 zudiv" style=" height: 300px; border:1px  solid"></div>
+                    <div class="flex flex1 zudiv" style=" height: 300px; border: 1px solid"></div>
+
+                </div>
+            </div>
+            <!-- 友链 -->
+            <!-- <div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="tag-title center-align">
+                            <i class="fas fa-address-book"></i>&nbsp;&nbsp;Friends
+                                <br>
+                                <div>
+                                    <i class="fas fa-address-book">
+                                        <a target="_blank" rel="noopener" href="https://www.hauchet.cn/"></a>
+                                    </i>&nbsp;&nbsp;
+                                    <i class="fas fa-address-book"></i>&nbsp;&nbsp;
+                                    <i class="fas fa-address-book"></i>&nbsp;&nbsp;
+                                    <i class="fas fa-address-book"></i>&nbsp;&nbsp;
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
 
             
 
