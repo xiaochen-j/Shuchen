@@ -1,0 +1,1886 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="SpringBoot入门的简单实用, 小晨的博客">
+    <meta name="description" content="我相信大家一定被springboot折磨过。我有幸在百度上找到一篇对我很有帮助的关于springboot的文章，特地放到这里与大家一起分享。这也是我找了大量篇幅里面找到的最适合新手的入门文章，跟着做，你会有意想不到的收获、加油，我依旧是那个">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>SpringBoot入门的简单实用 | 小晨的博客</title>
+    <link rel="icon" type="image/png" href="/Shuchen/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/Shuchen/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/Shuchen/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/Shuchen/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/Shuchen/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/Shuchen/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/Shuchen/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/Shuchen/css/my.css">
+<link rel="stylesheet" type="text/css" href="/Shuchen/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/Shuchen/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/Shuchen/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/Shuchen/css/reward.css">
+    
+
+
+
+    <script src="/Shuchen/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/Shuchen/" class="waves-effect waves-light">
+                    
+                    <img src="/Shuchen/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">小晨的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/Shuchen/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/Shuchen/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/Shuchen/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>收藏</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/Shuchen/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>分享</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/Shuchen/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/Shuchen/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/Shuchen/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/Shuchen/HTML" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>自定义</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>个人分享</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/Shuchen/HTML">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>音乐分享</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/Shuchen/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/Shuchen/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>书分享</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://wallhaven.cc/">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>图分享</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/Shuchen/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">小晨的博客</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/Shuchen/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/Shuchen/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/Shuchen/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			收藏
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/Shuchen/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			分享
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/Shuchen/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/Shuchen/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/Shuchen/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/Shuchen/HTML" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			自定义
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			个人分享
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/Shuchen/HTML " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>音乐分享</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/Shuchen/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/Shuchen/books " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>书分享</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://wallhaven.cc/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>图分享</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/xiaochen-j/Shuchen.git" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/xiaochen-j/Shuchen.git" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/Shuchen/medias/featureimages/17.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">SpringBoot入门的简单实用</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/Shuchen/tags/SpringBoot%E5%85%A5%E9%97%A8%E5%BF%85%E8%AF%BB/">
+                                <span class="chip bg-color">SpringBoot入门必读</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2023-09-01
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
+                    2023-09-01
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
+                    5.5k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
+                    28 Min
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>我相信大家一定被springboot折磨过。我有幸在百度上找到一篇对我很有帮助的关于springboot的文章，特地放到这里与大家一起分享。这也是我找了大量篇幅里面找到的最适合新手的入门文章，跟着做，你会有意想不到的收获、加油，我依旧是那个小白小晨。</p>
+<p>原文出处：<a target="_blank" rel="noopener" href="http://wed.xjx100.cn/news/225511.html">http://wed.xjx100/news/225511.html</a></p>
+<h2 id="springboot入门简单使用"><a href="#springboot入门简单使用" class="headerlink" title="springboot入门简单使用"></a>springboot入门简单使用</h2><p><a target="_blank" rel="noopener" href="http://wed.xjx100.cn/news.html">news</a>&#x2F;2023&#x2F;9&#x2F;1 8:35:55</p>
+<h3 id="springboot入门简单使用-1"><a href="#springboot入门简单使用-1" class="headerlink" title="springboot入门简单使用"></a>springboot入门简单使用</h3><ul>
+<li><ul>
+<li>1、SpringBoot项目创建并配置mysql数据库</li>
+<li><ul>
+<li>创建项目</li>
+<li>编写Controller测试</li>
+<li>配置数据库</li>
+</ul>
+</li>
+<li>2、SpringBoot集成mybatis-plus</li>
+<li><ul>
+<li>初始化数据库</li>
+<li>安装mybatis-plus</li>
+<li>通过mybatis-plus将数据库数据通过接口显示</li>
+</ul>
+</li>
+<li>3、SpringBoot三层架构Controller、Service、Dao</li>
+<li>4、SpringBoot集成Mabatis-plus编写增删改查接口</li>
+<li>其他</li>
+<li><ul>
+<li>热部署集成</li>
+<li>mybatis-plus日志打印</li>
+<li>跨域问题解决</li>
+<li>SpringBoot项目配置多环境</li>
+<li>SpringBoot返回结果统一封装</li>
+<li>分页封装</li>
+<li>参数校验</li>
+<li>自定义异常和全局异常捕获</li>
+<li><ul>
+<li>自定义异常</li>
+</ul>
+</li>
+<li>自动生成entity实体类</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="1、SpringBoot项目创建并配置mysql数据库"><a href="#1、SpringBoot项目创建并配置mysql数据库" class="headerlink" title="1、SpringBoot项目创建并配置mysql数据库"></a>1、SpringBoot项目创建并配置mysql数据库</h2><h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><blockquote>
+<p>开发环境：idea</p>
+<p>使用 <em>Spring Initializer</em> 可以快速生成 Spring Boot 应用</p>
+</blockquote>
+<p>首先点击左上角，文件—新建—项目</p>
+<img src="https://img-blog.csdnimg.cn/b08c1790f1ec4c0db55d3da92728ca18.png">
+
+<blockquote>
+<p>填写项目信息，注意：Java要选择8版本，然后点击下一步</p>
+</blockquote>
+<img src="https://img-blog.csdnimg.cn/06cd7b4c12fd494194e7f19414479112.png">
+
+
+
+<p>注释：需要安装的插件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Developer Tools选项下的Spring Boot DevTools和Lombok</span><br><span class="line">Web选项下的Spring Web</span><br><span class="line">SQL选项下的MySQL Driver</span><br></pre></td></tr></table></figure>
+
+<img src="https://img-blog.csdnimg.cn/1b1fe502e4df4f488282651324f08f2f.png">
+
+<p>看到左下角和右下角都没有进度条初始化项目后，并且右上角已经识别到了是一个Springboot项目后，项目即创建成功</p>
+<img src="https://img-blog.csdnimg.cn/cbe156241bf541078d01b8b91733ea08.png">
+
+<p>此时，启动一下项目，查看是否正常，提示如下字样即可以正常启动（端口：8080）</p>
+<img src="https://img-blog.csdnimg.cn/a68afa7a33014267861b417192f1bc54.png">
+
+<p>使用浏览器打开网址吧，并能显示如下界面</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localhost:8080</span><br></pre></td></tr></table></figure>
+
+<img src="https://img-blog.csdnimg.cn/72c52f41d1e04d9e8ef8bcd711abb4a5.png">
+
+<h3 id="编写Controller测试"><a href="#编写Controller测试" class="headerlink" title="编写Controller测试"></a>编写Controller测试</h3><p>新建<code>TestController</code>类，放在子包<code>controller</code>下</p>
+<img src="https://img-blog.csdnimg.cn/dfc884e880444f59a8e72fa563bb4af5.png">
+
+<img src="https://img-blog.csdnimg.cn/f64fb1ebcdbb4bb7ba7d35c52e796e65.png">
+
+<p>新建好后，在里面编写添加如下代码</p>
+<p>原始代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mini_program_yln.controller;<span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestController</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>修改后</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mini_program_yln.controller;<span class="keyword">import</span> org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;<span class="comment">//将数据以json格式返回给前端</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestController</span> &#123;<span class="meta">@GetMapping(&quot;/test&quot;)</span><span class="keyword">public</span> String <span class="title function_">test</span><span class="params">()</span> &#123;<span class="keyword">return</span> <span class="string">&quot;Hello world!&quot;</span>;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>重新启动下项目，访问</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localhost:8080/test</span><br></pre></td></tr></table></figure>
+
+<img src="https://img-blog.csdnimg.cn/7fb07c6a9a674e4aa826d2982208464b.png">
+
+<h3 id="配置数据库"><a href="#配置数据库" class="headerlink" title="配置数据库"></a>配置数据库</h3><p>在resource目录下新建<code>application.yml</code>文件</p>
+<img src="https://img-blog.csdnimg.cn/13eb677043f3494583b4d6189eaa4633.png">
+
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:datasource:driver-class-name: com.mysql.cj.jdbc.Driverurl:</span> <span class="string">jdbc:mysql://localhost:3306/mini_program?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghaiusername:</span> <span class="attr">rootpassword:</span> <span class="number">111111</span></span><br></pre></td></tr></table></figure>
+
+<p>解释：</p>
+<blockquote>
+<p>需要修改的一般有数据库名、mysql账户、mysql密码</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spring:datasource:driver-class-name: com.mysql.cj.jdbc.Driverurl: jdbc:mysql://localhost:3306/数据库名字?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghaiusername: mysql的账号password: mysql的密码</span><br></pre></td></tr></table></figure>
+
+<p>这里需要提前使用navicat新建数据库</p>
+<img src="https://img-blog.csdnimg.cn/f754ae4a4bee4ce2b177a6c5160e8c12.png">
+
+<h2 id="2、SpringBoot集成mybatis-plus"><a href="#2、SpringBoot集成mybatis-plus" class="headerlink" title="2、SpringBoot集成mybatis-plus"></a>2、SpringBoot集成mybatis-plus</h2><blockquote>
+<p>官网：<a target="_blank" rel="noopener" href="https://www.baomidou.com/">https://www.baomidou.com/</a></p>
+<p>mybatis-plus是用来操作数据库的持久层框架</p>
+</blockquote>
+<h3 id="初始化数据库"><a href="#初始化数据库" class="headerlink" title="初始化数据库"></a>初始化数据库</h3><p>按照官网的说法：操作</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.baomidou.com/pages/226c21/#%E5%88%9D%E5%A7%8B%E5%8C%96%E5%B7%A5%E7%A8%8B</span><br></pre></td></tr></table></figure>
+
+<p>打开navicat（也可以使用idea链接mysql，也可以使用hedisql等其它工具连接），点击查询，选择刚才创建的的数据库</p>
+<p>粘贴下面的代码后点击运行</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> <span class="keyword">user</span>;<span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">user</span></span><br><span class="line">(id <span class="type">BIGINT</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;主键ID&#x27;</span>,name <span class="type">VARCHAR</span>(<span class="number">30</span>) <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;姓名&#x27;</span>,age <span class="type">INT</span>(<span class="number">11</span>) <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;年龄&#x27;</span>,email <span class="type">VARCHAR</span>(<span class="number">50</span>) <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;邮箱&#x27;</span>,<span class="keyword">PRIMARY</span> KEY (id)</span><br><span class="line">);<span class="keyword">DELETE</span> <span class="keyword">FROM</span> <span class="keyword">user</span>;<span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">user</span> (id, name, age, email) <span class="keyword">VALUES</span></span><br><span class="line">(<span class="number">1</span>, <span class="string">&#x27;Jone&#x27;</span>, <span class="number">18</span>, <span class="string">&#x27;test1@baomidou.com&#x27;</span>),</span><br><span class="line">(<span class="number">2</span>, <span class="string">&#x27;Jack&#x27;</span>, <span class="number">20</span>, <span class="string">&#x27;test2@baomidou.com&#x27;</span>),</span><br><span class="line">(<span class="number">3</span>, <span class="string">&#x27;Tom&#x27;</span>, <span class="number">28</span>, <span class="string">&#x27;test3@baomidou.com&#x27;</span>),</span><br><span class="line">(<span class="number">4</span>, <span class="string">&#x27;Sandy&#x27;</span>, <span class="number">21</span>, <span class="string">&#x27;test4@baomidou.com&#x27;</span>),</span><br><span class="line">(<span class="number">5</span>, <span class="string">&#x27;Billie&#x27;</span>, <span class="number">24</span>, <span class="string">&#x27;test5@baomidou.com&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<img src="https://img-blog.csdnimg.cn/2bd7a68e3c4649f692d625d69f09d889.png">
+
+<p>此时就自动创建好了user表，并插入了几条示例数据</p>
+<img src="https://img-blog.csdnimg.cn/31f628d82744474db621677d30f73099.png">
+
+<h3 id="安装mybatis-plus"><a href="#安装mybatis-plus" class="headerlink" title="安装mybatis-plus"></a>安装mybatis-plus</h3><p>1、在pom.xml文件中引入依赖</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--mybatis-plus--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span><span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.baomidou<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span><span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-plus-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span><span class="tag">&lt;<span class="name">version</span>&gt;</span>3.5.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<img src="https://img-blog.csdnimg.cn/7e273ad2a88242f093c461c07bd7d476.png">
+
+<p>2、为了阻止恶意的全表更新删除，配置一下防全表更新与删除插件</p>
+<blockquote>
+<p>针对 update 和 delete 语句 作用: 阻止恶意的全表更新删除</p>
+</blockquote>
+<p>在如下路径下新建一个软件包：config</p>
+<img src="https://img-blog.csdnimg.cn/c18dc6f37b104453a6d188a621c4b550.png">
+
+<p>新建好如图所示</p>
+<img src="https://img-blog.csdnimg.cn/ae3ac9c163fc4c3db1bd4ab017d4a38d.png">
+
+<p>然后在config包下新建<code>MybatisPlusConfig </code>类</p>
+<p>然后添加如下代码，并导入相关的类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MybatisPlusConfig</span> &#123;<span class="meta">@Beanpublic</span> MybatisPlusInterceptor <span class="title function_">mybatisPlusInterceptor</span><span class="params">()</span> &#123;<span class="type">MybatisPlusInterceptor</span> <span class="variable">interceptor</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MybatisPlusInterceptor</span>();interceptor.addInnerInterceptor(<span class="keyword">new</span> <span class="title class_">BlockAttackInnerInterceptor</span>());<span class="keyword">return</span> interceptor;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>添加成功示例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mini_program_yln.config;<span class="keyword">import</span> com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.extension.plugins.inner.BlockAttackInnerInterceptor;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;<span class="comment">/*</span></span><br><span class="line"><span class="comment">* 针对 update 和 delete 语句 作用: 阻止恶意的全表更新删除</span></span><br><span class="line"><span class="comment">* */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MybatisPlusConfig</span> &#123;<span class="meta">@Beanpublic</span> MybatisPlusInterceptor <span class="title function_">mybatisPlusInterceptor</span><span class="params">()</span> &#123;<span class="type">MybatisPlusInterceptor</span> <span class="variable">interceptor</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MybatisPlusInterceptor</span>();interceptor.addInnerInterceptor(<span class="keyword">new</span> <span class="title class_">BlockAttackInnerInterceptor</span>());<span class="keyword">return</span> interceptor;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>后续还可能要在这里添加分页配置</p>
+<h3 id="通过mybatis-plus将数据库数据通过接口显示"><a href="#通过mybatis-plus将数据库数据通过接口显示" class="headerlink" title="通过mybatis-plus将数据库数据通过接口显示"></a>通过mybatis-plus将数据库数据通过接口显示</h3><p>在下面的目录下新建entity子包</p>
+<img src="https://img-blog.csdnimg.cn/a20621c500c442d6a7ebba58f03839d4.png">
+
+<p>然后再entity包下新建User类，添加如下代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mini_program_yln.entity;<span class="keyword">import</span> lombok.Data;<span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> &#123;<span class="comment">//表示id是主键，且插入数据时自增@TableId(value = &quot;id&quot;, type = IdType.AUTO)private Long id;private String name;private Integer age;private String email;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>新建mapper子包</p>
+<img src="https://img-blog.csdnimg.cn/c30485c778284d9b894d5999234626b9.png">
+
+<p>新建UserMapper接口，去继承BaseMapper</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mini_program_yln.mapper;<span class="keyword">import</span> com.baomidou.mybatisplus.core.mapper.BaseMapper;</span><br><span class="line"><span class="keyword">import</span> com.example.mini_program_yln.entity.User;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.annotations.Mapper;<span class="meta">@Mapper</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">UserMapper</span> <span class="keyword">extends</span> <span class="title class_">BaseMapper</span>&lt;User&gt; &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<img src="https://img-blog.csdnimg.cn/8e21d1f8ddfd4a939dacbf6741d7f694.png">
+
+<p>我们去TestController.java文件测试下mapper</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mini_program_yln.controller;<span class="keyword">import</span> com.example.mini_program_yln.entity.User;</span><br><span class="line"><span class="keyword">import</span> com.example.mini_program_yln.mapper.UserMapper;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;<span class="keyword">import</span> java.util.List;<span class="comment">//将数据以json格式返回给前端</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestController</span> &#123;<span class="meta">@Autowiredprivate</span> UserMapper userMapper;<span class="meta">@GetMapping(&quot;/testList&quot;)</span><span class="keyword">public</span> List&lt;User&gt; <span class="title function_">testList</span><span class="params">()</span> &#123;<span class="keyword">return</span> userMapper.selectList(<span class="literal">null</span>);&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>访问<code>http://localhost:8080/testList</code>,返回了数据库User表的全部数据</p>
+<img src="https://img-blog.csdnimg.cn/5c539669556b4d4d89654c8b8424cf27.png">
+
+<h2 id="3、SpringBoot三层架构Controller、Service、Dao"><a href="#3、SpringBoot三层架构Controller、Service、Dao" class="headerlink" title="3、SpringBoot三层架构Controller、Service、Dao"></a>3、SpringBoot三层架构Controller、Service、Dao</h2><img src="https://img-blog.csdnimg.cn/9a59f6a794214599805bb0abe0eb70eb.png">
+
+<p>现在我们的项目还差service没有创建</p>
+<img src="https://img-blog.csdnimg.cn/26fe99b10f094b1998a1498e7816eeda.png">
+
+<p>创建后</p>
+<img src="https://img-blog.csdnimg.cn/da3188912ae94475a6dcb6ff6c7b34cc.png">
+
+<p>在service包下新建<code>IUserService</code>接口，添加如下代码</p>
+<img src="https://img-blog.csdnimg.cn/7b04f21cf4ec4d70b329add0301026e8.png">
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mini_program_yln.servicce;<span class="keyword">import</span> com.baomidou.mybatisplus.extension.service.IService;</span><br><span class="line"><span class="keyword">import</span> com.example.mini_program_yln.entity.User;<span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">IUserService</span> <span class="keyword">extends</span> <span class="title class_">IService</span>&lt;User&gt; &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后再service包下新建impl子包，并在impl包下新建<code>UserServiceImpl</code>类</p>
+<img src="https://img-blog.csdnimg.cn/adcc01d3fed94ed68d9cdb2130d3aed3.png">
+
+<p>添加如下代码</p>
+<blockquote>
+<p>需要继承ServiceImpl，并实现自定义的IUserService</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mini_program_yln.servicce.impl;<span class="keyword">import</span> com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;</span><br><span class="line"><span class="keyword">import</span> com.example.mini_program_yln.entity.User;</span><br><span class="line"><span class="keyword">import</span> com.example.mini_program_yln.mapper.UserMapper;</span><br><span class="line"><span class="keyword">import</span> com.example.mini_program_yln.servicce.IUserService;<span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UserServiceImpl</span> <span class="keyword">extends</span> <span class="title class_">ServiceImpl</span>&lt;UserMapper, User&gt; <span class="keyword">implements</span> <span class="title class_">IUserService</span> &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4、SpringBoot集成Mabatis-plus编写增删改查接口"><a href="#4、SpringBoot集成Mabatis-plus编写增删改查接口" class="headerlink" title="4、SpringBoot集成Mabatis-plus编写增删改查接口"></a>4、SpringBoot集成Mabatis-plus编写增删改查接口</h2><p>在<code>IUserService.java</code>中编写代码，定义几个接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mini_program_yln.servicce;<span class="keyword">import</span> com.baomidou.mybatisplus.extension.plugins.pagination.Page;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.extension.service.IService;</span><br><span class="line"><span class="keyword">import</span> com.example.mini_program_yln.entity.User;<span class="keyword">import</span> java.util.List;<span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">IUserService</span> <span class="keyword">extends</span> <span class="title class_">IService</span>&lt;User&gt; &#123;Page&lt;User&gt; <span class="title function_">page</span><span class="params">(Integer current, Integer size, String username)</span>;<span class="type">boolean</span> <span class="title function_">saveOrUpdateById</span><span class="params">(User user)</span>;<span class="type">boolean</span> <span class="title function_">deleteBatchIds</span><span class="params">(List&lt;Integer&gt; ids)</span>;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在<code>UserServiceImpl.java</code>中实现一下几个接口</p>
+<p>把鼠标放在红色波浪线这一行，点击<code>实现方法</code>即可，会自动生成方法体</p>
+<img src="https://img-blog.csdnimg.cn/edbb2ab780ce4a8db47bb86b68788330.png">
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mini_program_yln.servicce.impl;<span class="keyword">import</span> com.baomidou.mybatisplus.extension.plugins.pagination.Page;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;</span><br><span class="line"><span class="keyword">import</span> com.example.mini_program_yln.entity.User;</span><br><span class="line"><span class="keyword">import</span> com.example.mini_program_yln.mapper.UserMapper;</span><br><span class="line"><span class="keyword">import</span> com.example.mini_program_yln.servicce.IUserService;<span class="keyword">import</span> java.util.List;<span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UserServiceImpl</span> <span class="keyword">extends</span> <span class="title class_">ServiceImpl</span>&lt;UserMapper, User&gt; <span class="keyword">implements</span> <span class="title class_">IUserService</span> &#123;<span class="meta">@Overridepublic</span> Page&lt;User&gt; <span class="title function_">page</span><span class="params">(Integer current, Integer size, String username)</span> &#123;<span class="keyword">return</span> <span class="literal">null</span>;&#125;<span class="meta">@Overridepublic</span> <span class="type">boolean</span> <span class="title function_">saveOrUpdateById</span><span class="params">(User user)</span> &#123;<span class="keyword">return</span> <span class="literal">false</span>;&#125;<span class="meta">@Overridepublic</span> <span class="type">boolean</span> <span class="title function_">deleteBatchIds</span><span class="params">(List&lt;Integer&gt; ids)</span> &#123;<span class="keyword">return</span> <span class="literal">false</span>;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>写一下逻辑的具体实现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mini_program_yln.servicce.impl;<span class="keyword">import</span> com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.core.injector.methods.DeleteBatchByIds;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.extension.plugins.pagination.Page;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;</span><br><span class="line"><span class="keyword">import</span> com.example.mini_program_yln.entity.User;</span><br><span class="line"><span class="keyword">import</span> com.example.mini_program_yln.mapper.UserMapper;</span><br><span class="line"><span class="keyword">import</span> com.example.mini_program_yln.servicce.IUserService;<span class="keyword">import</span> javax.annotation.Resource;</span><br><span class="line"><span class="keyword">import</span> java.util.List;<span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UserServiceImpl</span> <span class="keyword">extends</span> <span class="title class_">ServiceImpl</span>&lt;UserMapper, User&gt; <span class="keyword">implements</span> <span class="title class_">IUserService</span> &#123;<span class="meta">@Overridepublic</span> Page&lt;User&gt; <span class="title function_">page</span><span class="params">(Integer current, Integer size, String username)</span> &#123;LambdaQueryWrapper&lt;User&gt; wrapper = <span class="keyword">new</span> <span class="title class_">LambdaQueryWrapper</span>&lt;&gt;();<span class="keyword">if</span> (!<span class="string">&quot;&quot;</span>.equals(username)) &#123;<span class="comment">//不为空//精确查询//wrapper.eq(User::getName,username);//模糊查询wrapper.like(User::getName, username);&#125;Page&lt;User&gt; page = page(new Page&lt;&gt;(current, size), wrapper);return page;&#125;@Overridepublic boolean saveOrUpdateById(User user) &#123;if (user.getId() != null) &#123;//更新return updateById(user);&#125; else &#123;//新增return save(user);&#125;&#125;@Overridepublic boolean deleteBatchIds(List&lt;Integer&gt; ids) &#123;return removeByIds(ids);&#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后在controller包下新建UserController.java类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mini_program_yln.controller;<span class="keyword">import</span> com.baomidou.mybatisplus.extension.plugins.pagination.Page;</span><br><span class="line"><span class="keyword">import</span> com.example.mini_program_yln.entity.User;</span><br><span class="line"><span class="keyword">import</span> com.example.mini_program_yln.servicce.impl.UserServiceImpl;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Description;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.*;<span class="keyword">import</span> java.util.List;<span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/user&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UserController</span> &#123;<span class="meta">@Autowiredprivate</span> UserServiceImpl userService;<span class="meta">@GetMapping(&quot;/page&quot;)</span><span class="meta">@Description(&quot;分页列表-模糊查询&quot;)</span><span class="keyword">public</span> Page&lt;User&gt; <span class="title function_">page</span><span class="params">(<span class="meta">@RequestParam(defaultValue = &quot;&quot;)</span> String username, <span class="meta">@RequestParam(defaultValue = &quot;1&quot;)</span> Integer current, <span class="meta">@RequestParam(defaultValue = &quot;10&quot;)</span> Integer size)</span> &#123;<span class="keyword">return</span> userService.page(current, size, username);&#125;<span class="meta">@PostMapping(&quot;/save&quot;)</span><span class="meta">@Description(&quot;新增或更新&quot;)</span><span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">save</span><span class="params">(<span class="meta">@RequestBody</span> User user)</span> &#123;<span class="keyword">return</span> userService.saveOrUpdateById(user);&#125;<span class="meta">@PostMapping(&quot;/delete&quot;)</span><span class="meta">@Description(&quot;删除&quot;)</span><span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">delete</span><span class="params">(<span class="meta">@RequestBody</span> List&lt;Integer&gt; ids)</span> &#123;<span class="keyword">return</span> userService.deleteBatchIds(ids);&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>我们还需要在<code>MybatisPlusConfig.java</code>中新增分页配置项，增加下面的一行</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MybatisPlusConfig</span> &#123;<span class="meta">@Beanpublic</span> MybatisPlusInterceptor <span class="title function_">mybatisPlusInterceptor</span><span class="params">()</span> &#123;<span class="type">MybatisPlusInterceptor</span> <span class="variable">interceptor</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MybatisPlusInterceptor</span>();interceptor.addInnerInterceptor(<span class="keyword">new</span> <span class="title class_">BlockAttackInnerInterceptor</span>());<span class="comment">//分页配置interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.MYSQL));return interceptor;&#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>此时可以用postman测试接口了</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="热部署集成"><a href="#热部署集成" class="headerlink" title="热部署集成"></a>热部署集成</h3><p>比如我们将代码从左图修改为右图，就需要编译重新启动才可以，这是对资源的浪费，而且耗时，这就需要用到热部署</p>
+<img src="https://img-blog.csdnimg.cn/7b8712c917bf43f8bd64907a742a3c47.png">
+
+<p>1、首先点击左上角：文件—设置</p>
+<p>找到<code>构建、执行、部署</code>,点击编译器，勾选<code>自动构建项目</code></p>
+<img src="https://img-blog.csdnimg.cn/f882f8ee23d3483fa6e2b3858b403ddd.png">
+
+<p>2、然后开启idea的动态自动编译（有些会自动开启，那就不需要操作）</p>
+<img src="https://img-blog.csdnimg.cn/3fa9d8bfabf049dfb760a530e18413c7.png">
+
+<p>3、开启idea热部署策略</p>
+<p>点击右上角项目—编辑配置</p>
+<img src="https://img-blog.csdnimg.cn/7ed2685facb24e7d909833a7950593a5.png">
+
+<p>点击修改选项</p>
+<img src="https://img-blog.csdnimg.cn/8dbebf6a1a784186bdf8a9bfcf8793b8.png">
+
+<p>将<code>执行更新操作时</code>，修改为<code>更新类和资源</code></p>
+<img src="https://img-blog.csdnimg.cn/54d1f342cb2e4b2cbc48cfdebdbac29b.png">
+
+<p>4、在pom文件中添加插件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;plugin&gt;&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;&lt;configuration&gt;&lt;fork&gt;true&lt;/fork&gt;&lt;addResources&gt;true&lt;/addResources&gt;&lt;/configuration&gt;</span><br><span class="line">&lt;/plugin&gt;</span><br></pre></td></tr></table></figure>
+
+<img src="https://img-blog.csdnimg.cn/a22dc51b2fbe4d8c99caac2c6cc87b03.png">
+
+<p>此时当idea失去焦点五秒后就会自动更新资源，完成了热部署</p>
+<h3 id="mybatis-plus日志打印"><a href="#mybatis-plus日志打印" class="headerlink" title="mybatis-plus日志打印"></a>mybatis-plus日志打印</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">mybatis-plus:configuration:log-impl:</span> <span class="string">org.apache.ibatis.logging.stdout.StdOutImpl</span> <span class="comment">#开启sql日志</span></span><br></pre></td></tr></table></figure>
+
+<img src="https://img-blog.csdnimg.cn/2d893ebeb02f49709d07c380dd80b6d1.png">
+
+<h3 id="跨域问题解决"><a href="#跨域问题解决" class="headerlink" title="跨域问题解决"></a>跨域问题解决</h3><p>方式一：在Controller类中加入注解</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@CrossOrigin(&quot;*&quot;)</span><br></pre></td></tr></table></figure>
+
+<img src="https://img-blog.csdnimg.cn/22c8211fe4f94598a8a708da5fa8831b.png">
+
+<p>有时Gradle的项目需要使用这个</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@CrossOrigin(value = &quot;*&quot;,allowCredentials = &quot;true&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>方式二：新建跨域配置项解决</p>
+<p>在config包下新建<code>CorsConfig</code>类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mini_program_yln.config;<span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.cors.CorsConfiguration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.cors.UrlBasedCorsConfigurationSource;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.filter.CorsFilter;<span class="meta">@Configuration</span> <span class="comment">// 一定不能忽略此注解</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CorsConfig</span> &#123;<span class="meta">@Beanpublic</span> CorsFilter <span class="title function_">corsFilter</span><span class="params">()</span> &#123;<span class="comment">// 1.创建 CORS 配置对象CorsConfiguration config = new CorsConfiguration();// 支持域config.addAllowedOriginPattern(&quot;*&quot;);// 是否发送 Cookieconfig.setAllowCredentials(true);// 支持请求方式config.addAllowedMethod(&quot;*&quot;);// 允许的原始请求头部信息config.addAllowedHeader(&quot;*&quot;);// 暴露的头部信息config.addExposedHeader(&quot;*&quot;);// 2.添加地址映射UrlBasedCorsConfigurationSource corsConfigurationSource = new UrlBasedCorsConfigurationSource();corsConfigurationSource.registerCorsConfiguration(&quot;/**&quot;, config);// 3.返回 CorsFilter 对象return new CorsFilter(corsConfigurationSource);&#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="SpringBoot项目配置多环境"><a href="#SpringBoot项目配置多环境" class="headerlink" title="SpringBoot项目配置多环境"></a>SpringBoot项目配置多环境</h3><p>在resources目录下新建两个文件：<code>application-local.yaml</code>和<code>application-dev.yaml</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">application.yaml</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>active表示当前所处环境：local表示本地开发环境，dev表示线上环境</p>
+<p>可以对不同环境设置不同的mysql账号密码等</p>
+</blockquote>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:profiles:active:</span> <span class="string">dev</span></span><br><span class="line"><span class="string">application-local.yaml</span></span><br><span class="line"><span class="attr">spring:datasource:driver-class-name: com.mysql.cj.jdbc.Driverurl:</span> <span class="string">jdbc:mysql://localhost:3306/mini_program?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghaiusername:</span> <span class="attr">rootpassword:</span> <span class="number">123456</span></span><br><span class="line"><span class="attr">mybatis-plus:configuration:log-impl:</span> <span class="string">org.apache.ibatis.logging.stdout.StdOutImpl</span> <span class="comment">#开启sql日志</span></span><br><span class="line"><span class="string">application-dev.yaml</span></span><br><span class="line"><span class="attr">spring:datasource:driver-class-name: com.mysql.cj.jdbc.Driverurl:</span> <span class="string">jdbc:mysql://localhost:3306/mini_program?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghaiusername:</span> <span class="attr">rootpassword:</span> <span class="number">1234567</span></span><br><span class="line"><span class="attr">mybatis-plus:configuration:log-impl:</span> <span class="string">org.apache.ibatis.logging.stdout.StdOutImpl</span> <span class="comment">#开启sql日志</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="SpringBoot返回结果统一封装"><a href="#SpringBoot返回结果统一封装" class="headerlink" title="SpringBoot返回结果统一封装"></a>SpringBoot返回结果统一封装</h3><p>后端提供 RESTful API 给前端时，需要响应前端 API 调用是否成功：</p>
+<ul>
+<li>如果成功，成功的数据是什么。后续，前端会将数据渲染到页面上</li>
+<li>如果失败，失败的原因是什么。一般，前端会将原因弹出提示给用户</li>
+</ul>
+<p>因此，需要有<strong>统一响应</strong>，而不能是每个接口定义自己的风格。一般来说，统一响应返回信息如下：</p>
+<ul>
+<li>成功时，返回成功的状态码 + 数据</li>
+<li>失败时，返回失败的状态码 + 错误提示</li>
+</ul>
+<p>新建common子包</p>
+<img src="https://img-blog.csdnimg.cn/0ba7fca61e7646908e995b6ab262c9e7.png">
+
+<p>在<code>common</code>子包下创建<code>CommonResult</code>类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mini_program_yln.common;<span class="keyword">import</span> lombok.AllArgsConstructor;</span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"><span class="keyword">import</span> lombok.NoArgsConstructor;<span class="meta">@Data</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CommonResult</span>&lt;T&gt; &#123;<span class="comment">/*** 错误码*/</span><span class="keyword">private</span> Integer code;<span class="comment">/*** 返回数据*/</span><span class="keyword">private</span> T data;<span class="comment">/*** 错误提示，用户可阅读*/</span><span class="keyword">private</span> String msg;<span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; CommonResult&lt;T&gt; <span class="title function_">success</span><span class="params">(T data)</span> &#123;CommonResult&lt;T&gt; result = <span class="keyword">new</span> <span class="title class_">CommonResult</span>&lt;&gt;();result.code = <span class="number">0</span>;result.data = data;result.msg = <span class="string">&quot;&quot;</span>;<span class="keyword">return</span> result;&#125;<span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; CommonResult&lt;T&gt; <span class="title function_">error</span><span class="params">(Integer code, String message)</span> &#123;CommonResult&lt;T&gt; result = <span class="keyword">new</span> <span class="title class_">CommonResult</span>&lt;&gt;();result.code = code;result.msg = message;<span class="keyword">return</span> result;&#125;<span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; CommonResult&lt;T&gt; <span class="title function_">error</span><span class="params">()</span> &#123;CommonResult&lt;T&gt; result = <span class="keyword">new</span> <span class="title class_">CommonResult</span>&lt;&gt;();result.code = <span class="number">1</span>;result.msg = <span class="string">&quot;系统错误，请联系管理员&quot;</span>;<span class="keyword">return</span> result;&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>测试一下</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mini_program_yln.controller;<span class="keyword">import</span> com.example.mini_program_yln.common.CommonResult;</span><br><span class="line"><span class="keyword">import</span> com.example.mini_program_yln.entity.User;</span><br><span class="line"><span class="keyword">import</span> com.example.mini_program_yln.mapper.UserMapper;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Description;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;<span class="keyword">import</span> java.util.List;<span class="comment">//将数据以json格式返回给前端</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestController</span> &#123;<span class="meta">@Autowiredprivate</span> UserMapper userMapper;<span class="meta">@Description(&quot;测试统一返回-成功&quot;)</span><span class="meta">@GetMapping(&quot;/testResultSuccess&quot;)</span><span class="keyword">public</span> CommonResult&lt;List&lt;User&gt;&gt; <span class="title function_">testResultSuccess</span><span class="params">()</span> &#123;<span class="keyword">return</span> CommonResult.success(userMapper.selectList(<span class="literal">null</span>));&#125;<span class="meta">@Description(&quot;测试统一返回-失败&quot;)</span><span class="meta">@GetMapping(&quot;/testResultError&quot;)</span><span class="keyword">public</span> CommonResult&lt;List&lt;User&gt;&gt; <span class="title function_">testResultError</span><span class="params">()</span> &#123;<span class="keyword">return</span> CommonResult.error(<span class="number">400</span>, <span class="string">&quot;失败了&quot;</span>);&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="分页封装"><a href="#分页封装" class="headerlink" title="分页封装"></a>分页封装</h3><p>在common包下新建PageParam.java类</p>
+<img src="https://img-blog.csdnimg.cn/d783423fbc4d4af1a70e4da8fd21d56c.png">
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mini_program_yln.common;<span class="keyword">import</span> lombok.Data;<span class="keyword">import</span> java.io.Serializable;<span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PageParam</span> <span class="keyword">implements</span> <span class="title class_">Serializable</span> &#123;<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Integer</span> <span class="variable">PAGE_NO</span> <span class="operator">=</span> <span class="number">1</span>;<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Integer</span> <span class="variable">PAGE_SIZE</span> <span class="operator">=</span> <span class="number">10</span>;<span class="keyword">private</span> <span class="type">Integer</span> <span class="variable">pageNo</span> <span class="operator">=</span> PAGE_NO;<span class="keyword">private</span> <span class="type">Integer</span> <span class="variable">pageSize</span> <span class="operator">=</span> PAGE_SIZE;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>之前分页的写法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/page&quot;)</span></span><br><span class="line"><span class="meta">@Description(&quot;分页列表-模糊查询&quot;)</span></span><br><span class="line"><span class="keyword">public</span> Page&lt;User&gt; <span class="title function_">page</span><span class="params">(<span class="meta">@RequestParam(defaultValue = &quot;&quot;)</span> String username, <span class="meta">@RequestParam(defaultValue = &quot;1&quot;)</span> Integer current, <span class="meta">@RequestParam(defaultValue = &quot;10&quot;)</span> Integer size)</span> &#123;<span class="keyword">return</span> userService.page(current, size, username);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>现在的写法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@PostMapping(&quot;/pageFZ&quot;)</span></span><br><span class="line"><span class="meta">@Description(&quot;分页列表-分页封装&quot;)</span></span><br><span class="line"><span class="keyword">public</span> CommonResult&lt;Page&lt;User&gt;&gt; <span class="title function_">page</span><span class="params">(<span class="meta">@RequestBody</span> PageParam pageInfo)</span> &#123;Page&lt;User&gt; page = userService.page(<span class="keyword">new</span> <span class="title class_">Page</span>&lt;&gt;(pageInfo.getPageNo(), pageInfo.getPageSize()));<span class="keyword">return</span> CommonResult.success(page);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="参数校验"><a href="#参数校验" class="headerlink" title="参数校验"></a>参数校验</h3><p>例如在上面的分页封装中，我们的pageSize需要一个范围，不能无限大</p>
+<p>在pom文件中引入依赖</p>
+<img src="https://img-blog.csdnimg.cn/d71c81d3498e4533b20f4aa15a1cffbd.png">
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span><span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span><span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-validation<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>然后修改PageParam.java文件</p>
+<blockquote>
+<p>pageNo页码最小为1</p>
+<p>pageSize最小为1，最大为100</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">package com.example.mini_program_yln.common;import lombok.Data;</span><br><span class="line">import javax.validation.constraints.Min;</span><br><span class="line">import javax.validation.constraints.Max;</span><br><span class="line">import javax.validation.constraints.NotNull;</span><br><span class="line">import java.io.Serializable;@Data</span><br><span class="line">public class PageParam implements Serializable &#123;private static final Integer PAGE_NO = 1;private static final Integer PAGE_SIZE = 10;@NotNull(message = &quot;页码不能为空&quot;)@Min(value = 1, message = &quot;页码最小值为 1&quot;)private Integer pageNo = PAGE_NO;@NotNull(message = &quot;每页条数不能为空&quot;)@Min(value = 1, message = &quot;每页条数最小值为 1&quot;)@Max(value = 100, message = &quot;每页条数最大值为 100&quot;)private Integer pageSize = PAGE_SIZE;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>测试接口发现确实可以校验，但是会返回一堆堆栈信息，这样并不好，可以进行全局异常捕获</p>
+<img src="https://img-blog.csdnimg.cn/a80d37469b594f2e971a73b9e9640b6c.png">
+
+<h3 id="自定义异常和全局异常捕获"><a href="#自定义异常和全局异常捕获" class="headerlink" title="自定义异常和全局异常捕获"></a>自定义异常和全局异常捕获</h3><p>创建<code>exception</code>子包和<code>GlobalExceptionHandler.java</code>类</p>
+<img src="https://img-blog.csdnimg.cn/2cef8b6099dd41d5b72a61d453903a3f.png">
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mini_program_yln.exception;<span class="keyword">import</span> com.example.mini_program_yln.common.CommonResult;</span><br><span class="line"><span class="keyword">import</span> lombok.extern.slf4j.Slf4j;</span><br><span class="line"><span class="keyword">import</span> org.springframework.validation.BindException;</span><br><span class="line"><span class="keyword">import</span> org.springframework.validation.FieldError;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.MethodArgumentNotValidException;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.ControllerAdvice;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.ExceptionHandler;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.ResponseBody;<span class="keyword">import</span> javax.servlet.http.HttpServletRequest;<span class="meta">@Slf4j</span></span><br><span class="line"><span class="meta">@ControllerAdvice</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">GlobalExceptionHandler</span> &#123;<span class="comment">/*** 运行时异常* */</span><span class="meta">@ExceptionHandler(RuntimeException.class)</span><span class="meta">@ResponseBodypublic</span> CommonResult&lt;?&gt; ExceptionHandler() &#123;<span class="keyword">return</span> CommonResult.error();&#125;<span class="comment">/*** 自定义异常* */</span><span class="meta">@ExceptionHandler(CustomException.class)</span><span class="meta">@ResponseBodypublic</span> CommonResult&lt;?&gt; CustomExceptionHandler(CustomException e) &#123;<span class="keyword">return</span> CommonResult.error(<span class="number">400</span>, e.getMessage());&#125;<span class="comment">/*** 处理 SpringMVC 参数校验不正确*/</span><span class="meta">@ExceptionHandler(MethodArgumentNotValidException.class)</span><span class="meta">@ResponseBodypublic</span> CommonResult&lt;?&gt; methodArgumentNotValidExceptionExceptionHandler(MethodArgumentNotValidException ex) &#123;<span class="type">FieldError</span> <span class="variable">fieldError</span> <span class="operator">=</span> ex.getBindingResult().getFieldError();<span class="keyword">assert</span> fieldError != <span class="literal">null</span>; <span class="comment">// 断言，避免告警return CommonResult.error(400, String.format(&quot;请求参数不正确:%s:%s&quot;, fieldError.getField(), fieldError.getDefaultMessage()));&#125;/*** 处理系统异常，兜底处理所有的一切*/@ExceptionHandler(value = Exception.class)@ResponseBodypublic CommonResult&lt;?&gt; defaultExceptionHandler(HttpServletRequest req, Throwable ex) &#123;// 返回 ERROR CommonResultreturn CommonResult.error(400, &quot;未知异常，请联系管理员&quot;);&#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>此时分页参数传递错误，就可以正常捕获到</p>
+<img src="https://img-blog.csdnimg.cn/ac670e53758c49a482db6d4a79ecbce4.png">
+
+<h4 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h4><p>在exception下创建CustomException.java类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mini_program_yln.exception;<span class="keyword">import</span> lombok.Getter;<span class="meta">@Getter</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CustomException</span> <span class="keyword">extends</span> <span class="title class_">RuntimeException</span> &#123;<span class="keyword">private</span> Integer code;<span class="keyword">public</span> <span class="title function_">CustomException</span><span class="params">(Integer code, String msg)</span> &#123;<span class="built_in">super</span>(msg);<span class="built_in">this</span>.code = code;&#125;<span class="keyword">public</span> <span class="title function_">CustomException</span><span class="params">( String msg)</span> &#123;<span class="built_in">super</span>(msg);<span class="built_in">this</span>.code = <span class="number">400</span>;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>代码中使用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/page&quot;)</span><span class="meta">@Description(&quot;分页列表-模糊查询&quot;)</span><span class="keyword">public</span> Page&lt;User&gt; <span class="title function_">page</span><span class="params">(<span class="meta">@RequestParam(defaultValue = &quot;&quot;)</span> String username, <span class="meta">@RequestParam(defaultValue = &quot;1&quot;)</span> Integer current, <span class="meta">@RequestParam(defaultValue = &quot;10&quot;)</span> Integer size)</span> &#123;<span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">CustomException</span>(<span class="number">404</span>,<span class="string">&quot;aaa&quot;</span>);</span><br><span class="line"><span class="comment">//        return userService.page(current, size, username);&#125;</span></span><br></pre></td></tr></table></figure>
+
+<img src="https://img-blog.csdnimg.cn/61575128a40e41ebbeaa6f147398aa57.png">
+
+<h3 id="自动生成entity实体类"><a href="#自动生成entity实体类" class="headerlink" title="自动生成entity实体类"></a>自动生成entity实体类</h3><p>在utils包下新建SqlHelper类</p>
+<img src="https://img-blog.csdnimg.cn/c48c443cee284a1abd7c7b7eaec1052e.png">
+
+<blockquote>
+<p>使用之前一般需要修改packageOutPath、tablename、URL、NAME、PASS</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mini_program_yln.utils;<span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.FileWriter;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.PrintWriter;</span><br><span class="line"><span class="keyword">import</span> java.sql.Connection;</span><br><span class="line"><span class="keyword">import</span> java.sql.DriverManager;</span><br><span class="line"><span class="keyword">import</span> java.sql.PreparedStatement;</span><br><span class="line"><span class="keyword">import</span> java.sql.ResultSetMetaData;</span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;<span class="comment">/*** 从数据库表反射出实体类，自动生成实体类** <span class="doctag">@author</span> xxxx*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SqlHelper</span> &#123;<span class="comment">//基本数据配置private String packageOutPath = &quot;com.example.mini_program_yln.entity&quot;;// 指定实体生成所在包的路径，要修改private String authorName = &quot;xxxx&quot;;// 作者名字private String tablename = &quot;news&quot;;// 表名,要修改private String[] colnames; // 列名数组private String[] colTypes; // 列名类型数组private String version = &quot;V0.01&quot;; // 版本private int[] colSizes; // 列名大小数组private boolean f_util = false; // 是否需要导入包java.util.*private boolean f_sql = false; // 是否需要导入包java.sql.*private boolean f_lang = false; // 是否需要导入包java.sql.*private String defaultPath = &quot;/src/main/java/&quot;;// 数据库连接private static final String URL = &quot;jdbc:mysql://localhost:3306/mini_program?useUnicode=true&amp;characterEncoding=UTF-8&amp;useSSL=false&amp;serverTimezone=UTC&quot;;//要修改private static final String NAME = &quot;root&quot;;//要修改private static final String PASS = &quot;123456&quot;;//要修改private static final String DRIVER = &quot;com.mysql.jdbc.Driver&quot;;/** 构造函数*/public SqlHelper() &#123;// 创建连接Connection con;// 查要生成实体类的表String sql = &quot;select * from &quot; + tablename;PreparedStatement pStemt = null;try &#123;try &#123;Class.forName(DRIVER);&#125; catch (ClassNotFoundException e1) &#123;// TODO Auto-generated catch blocke1.printStackTrace();&#125;con = DriverManager.getConnection(URL, NAME, PASS);pStemt = con.prepareStatement(sql);ResultSetMetaData rsmd = pStemt.getMetaData();int size = rsmd.getColumnCount(); // 统计列colnames = new String[size];colTypes = new String[size];colSizes = new int[size];for (int i = 0; i &lt; size; i++) &#123;colnames[i] = rsmd.getColumnName(i + 1);colTypes[i] = rsmd.getColumnTypeName(i + 1);//自动生成包配置// if (colTypes[i].equalsIgnoreCase(&quot;datetime&quot;)) &#123;// f_util = true;// &#125;if (colTypes[i].equalsIgnoreCase(&quot;image&quot;) || colTypes[i].equalsIgnoreCase(&quot;text&quot;)|| colTypes[i].equalsIgnoreCase(&quot;datetime&quot;) || colTypes[i].equalsIgnoreCase(&quot;time&quot;)|| colTypes[i].equalsIgnoreCase(&quot;date&quot;) || colTypes[i].equalsIgnoreCase(&quot;datetime2&quot;)) &#123;f_sql = true;&#125;// if (colTypes[i].equalsIgnoreCase(&quot;int&quot;)) &#123;// f_lang = true;// &#125;colSizes[i] = rsmd.getColumnDisplaySize(i + 1);&#125;String content = parse(colnames, colTypes, colSizes);try &#123;File directory = new File(&quot;&quot;);String path = this.getClass().getResource(&quot;&quot;).getPath();System.out.println(path);String outputPath = directory.getAbsolutePath() + this.defaultPath+ this.packageOutPath.replace(&quot;.&quot;, &quot;/&quot;) + &quot;/&quot; + initcap(underlineToHump(tablename)) + &quot;.java&quot;;System.out.println(&quot;执行完毕，生成路径为：&quot; + outputPath);FileWriter fw = new FileWriter(outputPath);PrintWriter pw = new PrintWriter(fw);pw.println(content);pw.flush();pw.close();&#125; catch (IOException e) &#123;e.printStackTrace();&#125;&#125; catch (SQLException e) &#123;e.printStackTrace();&#125; finally &#123;&#125;&#125;/*** 功能：生成实体类主体代码** @param colnames* @param colTypes* @param colSizes* @return*/private String parse(String[] colnames, String[] colTypes, int[] colSizes) &#123;StringBuffer sb = new StringBuffer();// 生成package包路径sb.append(&quot;package &quot; + this.packageOutPath + &quot;;\r\n&quot;);// 判断是否导入工具包if (f_util) &#123;sb.append(&quot;import java.util.Date;\r\n&quot;);&#125;if (f_sql) &#123;sb.append(&quot;import java.sql.*;\r\n&quot;);&#125;if (f_lang) &#123;sb.append(&quot;import java.lang.*;\r\n&quot;);&#125;sb.append(&quot;import lombok.Data;\r\n&quot;);sb.append(&quot;\r\n&quot;);// 注释部分sb.append(&quot;   /**\r\n&quot;);sb.append(&quot;    * @文件名称：&quot; + initcap(underlineToHump(this.tablename)) + &quot;.java\r\n&quot;);sb.append(&quot;    * @创建时间：&quot; + new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;).format(new Date()) + &quot;\r\n&quot;);sb.append(&quot;    * @创  建  人：&quot; + this.authorName + &quot; \r\n&quot;);sb.append(&quot;    * @文件描述：&quot; + tablename + &quot; 实体类\r\n&quot;);sb.append(&quot;    * @文件版本：&quot; + this.version + &quot; \r\n&quot;);sb.append(&quot;    */ \r\n&quot;);sb.append(&quot;\n\r\n@Data&quot;);// 实体部分sb.append(&quot;\npublic class &quot; + initcap(underlineToHump(tablename)) + &quot;&#123;\r\n&quot;);processAllAttrs(sb);// 属性</span></span><br><span class="line"><span class="comment">//        processAllMethod(sb);// get set方法sb.append(&quot;&#125;\r\n&quot;);// System.out.println(sb.toString());return sb.toString();&#125;/*** 功能：生成所有属性** @param sb*/private void processAllAttrs(StringBuffer sb) &#123;for (int i = 0; i &lt; colnames.length; i++) &#123;sb.append(&quot;\tprivate &quot; + sqlType2JavaType(colTypes[i]) + &quot; &quot; + this.underlineToHump(colnames[i]) + &quot;;\r\n&quot;);&#125;&#125;/*** 功能：生成所有方法** @param sb*/</span></span><br><span class="line"><span class="comment">//    private void processAllMethod(StringBuffer sb) &#123;</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//        for (int i = 0; i &lt; colnames.length; i++) &#123;</span></span><br><span class="line"><span class="comment">//            sb.append(&quot;\tpublic void set&quot; + initcap(colnames[i]) + &quot;(&quot; + sqlType2JavaType(colTypes[i]) + &quot; &quot;</span></span><br><span class="line"><span class="comment">//                    + colnames[i] + &quot;)&#123;\r\n&quot;);</span></span><br><span class="line"><span class="comment">//            sb.append(&quot;\tthis.&quot; + colnames[i] + &quot;=&quot; + colnames[i] + &quot;;\r\n&quot;);</span></span><br><span class="line"><span class="comment">//            sb.append(&quot;\t&#125;\r\n&quot;);</span></span><br><span class="line"><span class="comment">//            sb.append(&quot;\tpublic &quot; + sqlType2JavaType(colTypes[i]) + &quot; get&quot; + initcap(colnames[i]) + &quot;()&#123;\r\n&quot;);</span></span><br><span class="line"><span class="comment">//            sb.append(&quot;\t\treturn &quot; + colnames[i] + &quot;;\r\n&quot;);</span></span><br><span class="line"><span class="comment">//            sb.append(&quot;\t&#125;\r\n&quot;);</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//    &#125;/*** 功能：将输入字符串的首字母改成大写** @param str* @return*/private String initcap(String str) &#123;char[] ch = str.toCharArray();if (ch[0] &gt;= &#x27;a&#x27; &amp;&amp; ch[0] &lt;= &#x27;z&#x27;) &#123;ch[0] = (char) (ch[0] - 32);&#125;return new String(ch);&#125;/*** 功能：获得列的数据类型** @param sqlType* @return*/private String sqlType2JavaType(String sqlType) &#123;if (sqlType.equalsIgnoreCase(&quot;bit&quot;)) &#123;return &quot;Boolean&quot;;&#125; else if (sqlType.equalsIgnoreCase(&quot;decimal&quot;) || sqlType.equalsIgnoreCase(&quot;money&quot;)|| sqlType.equalsIgnoreCase(&quot;smallmoney&quot;) || sqlType.equalsIgnoreCase(&quot;numeric&quot;)|| sqlType.equalsIgnoreCase(&quot;bigint&quot;)) &#123;return &quot;Long&quot;;&#125; else if (sqlType.equalsIgnoreCase(&quot;float&quot;)) &#123;return &quot;Double&quot;;&#125; else if (sqlType.equalsIgnoreCase(&quot;int&quot;) || sqlType.equalsIgnoreCase(&quot;int identity&quot;)) &#123;return &quot;Integer&quot;;&#125; else if (sqlType.equalsIgnoreCase(&quot;image&quot;) || sqlType.equalsIgnoreCase(&quot;varbinary(max)&quot;)|| sqlType.equalsIgnoreCase(&quot;varbinary&quot;) || sqlType.equalsIgnoreCase(&quot;udt&quot;)|| sqlType.equalsIgnoreCase(&quot;binary&quot;)) &#123;return &quot;Byte[]&quot;;&#125; else if (sqlType.equalsIgnoreCase(&quot;nchar&quot;) || sqlType.equalsIgnoreCase(&quot;nvarchar(max)&quot;)|| sqlType.equalsIgnoreCase(&quot;nvarchar&quot;) || sqlType.equalsIgnoreCase(&quot;nvarchar(ntext)&quot;)|| sqlType.equalsIgnoreCase(&quot;uniqueidentifier&quot;) || sqlType.equalsIgnoreCase(&quot;xml&quot;)|| sqlType.equalsIgnoreCase(&quot;char&quot;) || sqlType.equalsIgnoreCase(&quot;varchar(max)&quot;)|| sqlType.equalsIgnoreCase(&quot;text&quot;) || sqlType.equalsIgnoreCase(&quot;varchar&quot;)) &#123;return &quot;String&quot;;&#125; else if (sqlType.equalsIgnoreCase(&quot;real&quot;)) &#123;return &quot;Float&quot;;&#125; else if (sqlType.equalsIgnoreCase(&quot;smallint&quot;) || sqlType.equalsIgnoreCase(&quot;tinyint&quot;)) &#123;return &quot;Short&quot;;&#125; else if (sqlType.equalsIgnoreCase(&quot;date&quot;) || sqlType.equalsIgnoreCase(&quot;datetime&quot;)|| sqlType.equalsIgnoreCase(&quot;time&quot;) || sqlType.equalsIgnoreCase(&quot;datetime2&quot;)|| sqlType.equalsIgnoreCase(&quot;timestamp&quot;)) &#123;return &quot;Date&quot;;&#125; else &#123;System.out.println(&quot;数据类型异常，类型为：&quot; + sqlType);&#125;return null;&#125;/*** 下划线转驼峰** @String para*/private String underlineToHump(String para) &#123;StringBuilder result = new StringBuilder();String a[] = para.split(&quot;_&quot;);for (String s : a) &#123;if (result.length() == 0) &#123;result.append(s.toLowerCase());&#125; else &#123;result.append(s.substring(0, 1).toUpperCase());result.append(s.substring(1).toLowerCase());&#125;&#125;return result.toString();&#125;/*** 出口 TODO** @param args*/public static void main(String[] args) &#123;new SqlHelper();&#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/Shuchen/about" rel="external nofollow noreferrer">XiaoChen</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://github.com/xiaochen-j/Shuchen.git/Shuchen/2023/09/01/SpringBoot%E5%85%A5%E9%97%A8%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%9E%E7%94%A8/">https://github.com/xiaochen-j/Shuchen.git/Shuchen/2023/09/01/SpringBoot%E5%85%A5%E9%97%A8%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%9E%E7%94%A8/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint policy. If reproduced, please indicate source
+                    <a href="/Shuchen/about" target="_blank">XiaoChen</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/Shuchen/tags/SpringBoot%E5%85%A5%E9%97%A8%E5%BF%85%E8%AF%BB/">
+                                    <span class="chip bg-color">SpringBoot入门必读</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/Shuchen/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/Shuchen/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/Shuchen/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/Shuchen/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/Shuchen/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/Shuchen/libs/valine/av-min.js"></script>
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'waz35QwH64KNfIUvaXAjL1Ar-gzGzoHsz',
+        appKey: 'w94gG8z61AHmOec1eqmt0Egg',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'en',
+        placeholder: 'just go go',
+        enableQQ: true,
+        emojiCDN: '//i0.hdslb.com/bfs/emote/', 
+        // 表情title和图片映射
+        emojiMaps: {
+        "tv_doge": "6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png",
+        "tv_亲亲": "a8111ad55953ef5e3be3327ef94eb4a39d535d06.png",
+        "tv_偷笑": "bb690d4107620f1c15cff29509db529a73aee261.png",
+        "tv_再见": "180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png",
+        "tv_冷漠": "b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png",
+        "tv_发怒": "34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png",
+        "tv_发财": "34db290afd2963723c6eb3c4560667db7253a21a.png",
+        "tv_可爱": "9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png",
+        "tv_吐血": "09dd16a7aa59b77baa1155d47484409624470c77.png",
+        "tv_呆": "fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png",
+        "tv_呕吐": "9f996894a39e282ccf5e66856af49483f81870f3.png",
+        "tv_困": "241ee304e44c0af029adceb294399391e4737ef2.png",
+        "tv_坏笑": "1f0b87f731a671079842116e0991c91c2c88645a.png",
+        "tv_大佬": "093c1e2c490161aca397afc45573c877cdead616.png",
+        "tv_大哭": "23269aeb35f99daee28dda129676f6e9ea87934f.png",
+        "tv_委屈": "d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png",
+        "tv_害羞": "a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png",
+        "tv_尴尬": "7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png",
+        "tv_微笑": "70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png",
+        "tv_思考": "90cf159733e558137ed20aa04d09964436f618a1.png",
+        "tv_惊吓": "0d15c7e2ee58e935adc6a7193ee042388adc22af.png",
+        "tv_打脸": "56ab10b624063e966bfcb76ea5dc4794d87dfd47.png",
+        "tv_抓狂": "fe31c08edad661d63762b04e17b8d5ae3c71a757.png",
+        "tv_抠鼻": "c666f55e88d471e51bbd9fab9bb308110824a6eb.png",
+        "tv_斜眼笑": "911f987aa8bc1bee12d52aafe62bc41ef4474e6c.png",
+        "tv_无奈": "ea8ed89ee9878f2fece2dda0ea8a5dbfe21b5751.png",
+        "tv_晕": "5443c22b4d07fb1907ccc610c8e6db254f2461b7.png",
+        "tv_流汗": "cead1c351ab8d79e9f369605beb90148db0fbed3.png",
+        "tv_流泪": "7e71cde7858f0cd50d74b0264aa26db612a8a167.png",
+        "tv_流鼻血": "c32d39db2737f89b904ca32700d140a9241b0767.png",
+        "tv_点赞": "f85c354995bd99e28fc76c869bfe42ba6438eff4.png",
+        "tv_生气": "26702dcafdab5e8225b43ffd23c94ac1ff932654.png",
+        "tv_生病": "8b0ec90e6b86771092a498c54f09fc94621c1900.png",
+        "tv_疑问": "0793d949b18d7be716078349c202c15ff166f314.png",
+        "tv_白眼": "c1d59f439e379ee50eef488bcb5e5378e5044ea4.png",
+        "tv_皱眉": "72ccad6679fea0d14cce648b4d818e09b8ffea2d.png",
+        "tv_目瞪口呆": "0b8cb81a68de5d5365212c99375e7ace3e7891b7.png",
+        "tv_睡着": "8b196675b53af58264f383c50ad0945048290b33.png",
+        "tv_笑哭": "1abc628f6d4f4caf9d0e7800878f4697abbc8273.png",
+        "tv_腼腆": "89712c0d4af73e67f89e35cbc518420380a7f6f4.png",
+        "tv_色": "61822c7e9aae5da76475e7892534545336b23a6f.png",
+        "tv_调侃": "4bc022533ef31544ca0d72c12c808cf4a1cce3e3.png",
+        "tv_调皮": "b9c41de8e82dd7a8515ae5e3cb63e898bf245186.png",
+        "tv_鄙视": "6e72339f346a692a495b123174b49e4e8e781303.png",
+        "tv_闭嘴": "c9e990da7f6e93975e25fd8b70e2e290aa4086ef.png",
+        "tv_难过": "87f46748d3f142ebc6586ff58860d0e2fc8263ba.png",
+        "tv_馋": "fc7e829b845c43c623c8b490ee3602b7f0e76a31.png",
+        "tv_鬼脸": "0ffbbddf8a94d124ca2f54b360bbc04feb6bbfea.png",
+        "tv_黑人问号": "45821a01f51bc867da9edbaa2e070410819a95b2.png",
+        "tv_鼓掌": "1d21793f96ef4e6f48b23e53e3b9e42da833a0f6.png"
+        },
+        requiredFields: ['nick','mail'], //设置必填项
+    });
+
+</script>
+
+<!--酷Q推送-->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
+            <div class="card">
+                <a href="/Shuchen/2023/09/01/SpringBoot%E5%85%A5%E9%97%A8%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%9E%E7%94%A8/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/Shuchen/medias/featureimages/17.jpg" class="responsive-img" alt="SpringBoot入门的简单实用">
+                        
+                        <span class="card-title">SpringBoot入门的简单实用</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            XiaoChen
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/Shuchen/tags/SpringBoot%E5%85%A5%E9%97%A8%E5%BF%85%E8%AF%BB/">
+                        <span class="chip bg-color">SpringBoot入门必读</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/Shuchen/2023/08/19/%E7%95%99%E8%A8%80%E6%9D%BF%E5%8A%9F%E8%83%BD%E7%9A%84%E5%AE%9E%E7%8E%B0/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/Shuchen/medias/featureimages/16.jpg" class="responsive-img" alt="留言板功能的实现">
+                        
+                        <span class="card-title">留言板功能的实现</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            XiaoChen
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/Shuchen/tags/Valine%E7%95%99%E8%A8%80%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">Valine留言系统</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/Shuchen/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/Shuchen/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/Shuchen/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/Shuchen/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/Shuchen/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/Shuchen/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="5107070683"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/Shuchen/libs/aplayer/APlayer.min.js"></script>
+<script src="/Shuchen/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2023</span>
+            
+            <a href="/Shuchen/about" target="_blank">XiaoChen</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
+                        class="white-color">13.7k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/xiaochen-j/Shuchen.git" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:3098438817@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=3098438817" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 3098438817" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="/Shuchen/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/Shuchen/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/Shuchen/libs/materialize/materialize.min.js"></script>
+    <script src="/Shuchen/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/Shuchen/libs/aos/aos.js"></script>
+    <script src="/Shuchen/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/Shuchen/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/Shuchen/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/Shuchen/libs/others/star.js"><\/script>');
+            }
+        </script>
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/Shuchen/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/Shuchen/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/Shuchen/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/Shuchen/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
